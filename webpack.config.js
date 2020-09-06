@@ -27,5 +27,13 @@ module.exports = {
       filename: 'index.html',
       template: 'src/index.html',
     }),
+    new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: 'src/404.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: '500.html',
+      template: 'src/500.html',
+    }),
   ],
 }

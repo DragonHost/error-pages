@@ -44,5 +44,5 @@ jobs:
         secret_key: ${{ secrets.SPACES_SECRET_KEY }}
         space_name: dragonhost-error-pages
         space_region: ams3
-        source: ./dist/
+        source: dist/
 

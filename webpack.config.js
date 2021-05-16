@@ -1,10 +1,12 @@
-const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/css/app.css',
   mode: process.env.NODE_ENV,
+  output: {
+    publicPath: 'https://error-pages.dragonhost.uk-lon1.upcloudobjects.com/'
+  },
   module: {
     rules: [
       {
@@ -12,7 +14,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } },
+            { loader: 'css-loader', options: { importLoaders: 1, minimize: true } },
             'postcss-loader',
           ],
         }),
